@@ -3,5 +3,5 @@ build
 test
 src/**.js
 .idea/*
-
+env/**.env
 package-lock.json
