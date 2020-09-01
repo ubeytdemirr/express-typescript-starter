@@ -1,3 +1,1 @@
-# strive-hw-azure-backend
-
-Strive Homeworks Backend @ Azure
+#Express-Typescript-Starter-Template

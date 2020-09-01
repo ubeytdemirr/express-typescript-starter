@@ -1,11 +1,11 @@
 {
-  "name": "strive-hw-azure-backend",
+  "name": "express-typescript-starter",
   "version": "1.0.0",
-  "description": "Strive Homeworks Backend @ Azure",
+  "description": "Starter template for express app using typescript",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/ubeytdemirr/strive-hw-azure-backend",
+  "repository": "https://github.com/ubeytdemirr/express-typescript-starter",
   "keywords": [],
   "scripts": {
     "start": "nodemon -r dotenv/config  ./build/main dotenv_config_path=./env/.production.env",
