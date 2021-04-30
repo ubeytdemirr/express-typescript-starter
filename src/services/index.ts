@@ -1,9 +1,13 @@
-import {Router} from "express";
+import { Router } from "express";
 
-import usersRouter from '@services/users/users.route';
+import { router as userService } from "@services/users";
+
+import testService from "./test";
 
 const router = Router();
 
-router.use("/users",usersRouter)
+router.use("/users", userService);
+
+router.use("/test", testService);
 
 export default router;

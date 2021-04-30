@@ -1,5 +1,7 @@
-import * as JwtUtilities from "./jwt/jwt"
+import * as JwtUtilities from "./jwt";
 
-import S3 from "./multer/multer"
+import S3 from "./multer/multer";
 
-export default {JwtUtilities,S3}
+import passport from "./passport";
+
+export default { JwtUtilities, S3, passport };

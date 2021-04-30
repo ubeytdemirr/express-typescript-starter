@@ -1,12 +1,12 @@
 import { Router } from "express";
 
-import passport from "@utils/passport/passport";
+import passport from "@utils/passport/index";
 
-import tokenHandler from "@middlewares/TokenHandler/TokenHandler";
+import tokenHandler from "@middlewares/token";
 
 import Users from "./users.schema";
 
-import ApiError from "@classes/ApiError/ApiError";
+import ApiError from "@classes/error";
 
 const router = Router();
 

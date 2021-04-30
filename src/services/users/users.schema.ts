@@ -2,17 +2,26 @@ import bcrypt from "bcrypt";
 
 import { model, Schema } from "mongoose";
 
-import { IUsers } from "./users";
+import { IUser } from "../../typings/user";
 
 const schema: Schema = new Schema(
   {
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    toJSON: {
+      transform: function (_doc, ret) {
+        delete ret.password;
+        delete ret.__v;
+        return ret;
+      },
+    },
+  }
 );
 
-schema.pre<IUsers>("save", async function (next) {
+schema.pre<IUser>("save", async function (next) {
   try {
     this.password = await bcrypt.hash(this.password, 8);
 
@@ -22,4 +31,4 @@ schema.pre<IUsers>("save", async function (next) {
   }
 });
 
-export default model<IUsers>("Users", schema);
+export default model<IUser>("Users", schema);

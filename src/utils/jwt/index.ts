@@ -12,7 +12,7 @@ const {
 
 export async function AccessToken(data) {
   const accessToken = await signJWT(data, JWT_ACCESS_SECRET, {
-    expiresIn: "1h",
+    expiresIn: process.env.NODE_ENV !== "production" ? "1h" : "8h",
     issuer: JWT_ISSUER,
     audience: JWT_AUDIENCE,
   });

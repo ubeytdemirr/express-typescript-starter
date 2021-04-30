@@ -1,0 +1,10 @@
+{
+  "merge_logs": true,
+  "log_date_format": "DD/MM/YYYY |  HH:mm Z",
+  "script": "npm start",
+  "watch": true,
+  "watch_options": {
+    "followSymlinks": false
+  },
+  "name": "yourapp"
+}
